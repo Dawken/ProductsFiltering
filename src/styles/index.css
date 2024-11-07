@@ -15,13 +15,20 @@
     font-weight: 700;
     font-style: normal;
 }
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('../assets/fonts/samsungOne/SamsungSharpSans-Bold.woff')
+        format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
 
 body {
     margin: 0;
 }
 #root {
-    width: 100dvw;
-    height: 100dvh;
+    max-width: 100dvw;
+    max-height: 100dvh;
 }
 ::-webkit-scrollbar {
     width: 10px;

@@ -17,7 +17,7 @@ export type WashingMachineType = {
     monthlyInstallment: number
     energyClass: string
     availability: string[]
-    status: string
+    available: boolean
 }
 
 export const washingMachines = [
@@ -37,7 +37,7 @@ export const washingMachines = [
         monthlyInstallment: 53.31,
         energyClass: 'A',
         availability: ['15.09.2022', '21.09.2022'],
-        status: 'Niedostępna',
+        available: true,
     },
     {
         model: 'WW10T654DLH',
@@ -55,7 +55,7 @@ export const washingMachines = [
         monthlyInstallment: 53.31,
         energyClass: 'A',
         availability: ['15.09.2022', '21.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW90T654DLH',
@@ -73,7 +73,7 @@ export const washingMachines = [
         monthlyInstallment: 53.31,
         energyClass: 'A',
         availability: ['15.09.2022', '21.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW80T534ABT',
@@ -91,7 +91,7 @@ export const washingMachines = [
         monthlyInstallment: 48.31,
         energyClass: 'B',
         availability: ['15.09.2022', '10.10.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW11T754ABX',
@@ -109,7 +109,7 @@ export const washingMachines = [
         monthlyInstallment: 58.31,
         energyClass: 'A',
         availability: ['15.09.2022', '10.10.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW70T554DTW',
@@ -126,7 +126,7 @@ export const washingMachines = [
         monthlyInstallment: 41.65,
         energyClass: 'C',
         availability: ['15.09.2022', '25.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW12T684DLX',
@@ -144,7 +144,7 @@ export const washingMachines = [
         monthlyInstallment: 64.98,
         energyClass: 'A',
         availability: ['15.09.2022', '05.10.2022'],
-        status: 'Niedostępna',
+        available: true,
     },
     {
         model: 'WW90T534DLH',
@@ -161,7 +161,7 @@ export const washingMachines = [
         monthlyInstallment: 49.98,
         energyClass: 'B',
         availability: ['15.09.2022', '18.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW85T654DLE',
@@ -179,7 +179,7 @@ export const washingMachines = [
         monthlyInstallment: 51.65,
         energyClass: 'A',
         availability: ['15.09.2022', '22.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW10T754DLE',
@@ -197,7 +197,7 @@ export const washingMachines = [
         monthlyInstallment: 54.98,
         energyClass: 'A',
         availability: ['15.09.2022', '20.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
     {
         model: 'WW90T554DLH',
@@ -215,6 +215,6 @@ export const washingMachines = [
         monthlyInstallment: 53.31,
         energyClass: 'A',
         availability: ['15.09.2022', '25.09.2022'],
-        status: 'dostępny',
+        available: true,
     },
 ]

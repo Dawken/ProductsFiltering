@@ -4,7 +4,7 @@ import { washingMachines } from '../../../features/washingMachines/washingMachin
 
 const WashingMachines = () => {
     return (
-        <div className='w-full h-full flex flex-col justify-center items-center text-black font-samsungOne'>
+        <div className='w-full h-full flex flex-col justify-center items-center text-black font-samsungOne  overflow-auto'>
             <h1 className='font-bold text-[40px] leading-[56px]'>
                 Wybierz urządzenia
             </h1>
