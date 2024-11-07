@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('../assets/fonts/samsungOne/SamsungOne-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('../assets/fonts/samsungOne/SamsungOne-700.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SamsungOne';
+    src: url('../assets/fonts/samsungOne/SamsungSharpSans-Bold.woff')
+        format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+#root {
+    max-width: 100dvw;
+    max-height: 100dvh;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #424242;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
