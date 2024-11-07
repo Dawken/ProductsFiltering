@@ -23,14 +23,14 @@ const WashingMachineCard = ({
     } = washingMachine
 
     return (
-        <div className='flex flex-col items-center bg-white rounded-[20px] p-[24px] gap-[10px] max-w-[290px]'>
+        <div className='flex flex-col items-center bg-white rounded-[20px] p-[24px] gap-[10px]'>
             <img
                 src={'/washingMachine.png'}
                 width={200}
                 height={200}
                 alt='Zdjęcię pralki'
             />
-            <div className='flex flex-col gap-[14px] text-[12px] text-[#767676]'>
+            <div className='flex flex-col gap-[14px] text-[12px] text-[#767676] w-[290px]'>
                 <div className='flex flex-col gap-[29px]'>
                     <CardInformation
                         model={model}

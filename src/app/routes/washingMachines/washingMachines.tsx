@@ -8,8 +8,10 @@ const WashingMachines = () => {
             <h1 className='font-bold text-[40px] leading-[56px]'>
                 Wybierz urządzenia
             </h1>
-            <div className='bg-[#F8F8F8]'>
-                <WashingMachinesCards washingMachines={washingMachines} />
+            <div className='flex items-center justify-center w-full bg-[#F8F8F8]'>
+                <div className='w-full flex flex-col items-center justify-center max-w-[1220px] py-12'>
+                    <WashingMachinesCards washingMachines={washingMachines} />
+                </div>
             </div>
         </div>
     )
