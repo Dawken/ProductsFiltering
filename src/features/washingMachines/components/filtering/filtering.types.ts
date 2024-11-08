@@ -1,8 +1,12 @@
 import { WashingMachineType } from '../../washingMachinesData'
 
-type Props = {
+type HookProps = {
     washingMachines: WashingMachineType[]
     setFilteredWashingMachines: (data: WashingMachineType[]) => void
 }
 
-export type { Props }
+type Props = HookProps & {
+    filteredWashingMachines: WashingMachineType[]
+}
+
+export type { Props, HookProps }

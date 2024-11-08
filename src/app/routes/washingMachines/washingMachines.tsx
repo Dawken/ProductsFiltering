@@ -15,6 +15,7 @@ const WashingMachines = () => {
             <div className='flex items-center justify-center w-full bg-[#F8F8F8]'>
                 <div className='w-full flex flex-col items-center justify-center max-w-[1220px] py-12'>
                     <Filtering
+                        filteredWashingMachines={filteredWashingMachines}
                         washingMachines={washingMachinesData}
                         setFilteredWashingMachines={setFilteredWashingMachines}
                     />
