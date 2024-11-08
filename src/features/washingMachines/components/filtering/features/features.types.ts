@@ -1,11 +1,11 @@
-import { FeatureFilter } from '../../../../../types/filtering/featureType'
+import { FeatureEnum } from '../../../../../types/filtering/featureEnum'
 
 type HookProps = {
-    setFeatureFilter: (data: FeatureFilter) => void
+    setFeatureFilter: (data: FeatureEnum | 'wszystkie') => void
 }
 
 type Props = HookProps & {
-    featureFilter: FeatureFilter
+    featureFilter: FeatureEnum | 'wszystkie'
 }
 
 export type { HookProps, Props }

@@ -3,6 +3,7 @@ import { Props } from './filtering.types'
 import useFiltering from './useFiltering'
 import SortBy from './sortBy/sortBy'
 import Features from './features/features'
+import EnergyClass from './energyClass/energyClass'
 
 const Filtering = ({
     filteredWashingMachines,
@@ -16,6 +17,8 @@ const Filtering = ({
         setSortOption,
         featureFilter,
         setFeatureFilter,
+        energyClass,
+        setEnergyClass,
     } = useFiltering({
         washingMachines,
         setFilteredWashingMachines,
@@ -39,6 +42,10 @@ const Filtering = ({
                     <Features
                         featureFilter={featureFilter}
                         setFeatureFilter={setFeatureFilter}
+                    />
+                    <EnergyClass
+                        energyClass={energyClass}
+                        setEnergyClass={setEnergyClass}
                     />
                 </div>
 

@@ -1,17 +1,23 @@
 import { ChangeEvent, useEffect, useState } from 'react'
 import { HookProps } from './filtering.types'
 import { SortOption } from '../../../../types/filtering/sortByType'
-import { Feature } from '../../washingMachinesData'
+import { EnergyClassEnum } from '../../../../types/filtering/energyClassEnum'
+import { FeatureEnum } from '../../../../types/filtering/featureEnum'
 
 const useFiltering = ({
     washingMachines,
     setFilteredWashingMachines,
 }: HookProps) => {
     const [searchTerm, setSearchTerm] = useState('')
-    const [sortOption, setSortOption] = useState<SortOption>('wszystkie')
-    const [featureFilter, setFeatureFilter] = useState<Feature | 'wszystkie'>(
+    const [sortOption, setSortOption] = useState<SortOption | 'wszystkie'>(
         'wszystkie'
     )
+    const [featureFilter, setFeatureFilter] = useState<
+        FeatureEnum | 'wszystkie'
+    >('wszystkie')
+    const [energyClass, setEnergyClass] = useState<
+        EnergyClassEnum | 'wszystkie'
+    >('wszystkie')
 
     const applyFiltersAndSort = () => {
         let updatedMachines = [...washingMachines]
@@ -53,6 +59,11 @@ const useFiltering = ({
                 machine.features.includes(featureFilter)
             )
         }
+        if (energyClass !== 'wszystkie') {
+            updatedMachines = updatedMachines.filter((machine) =>
+                machine.energyClass.includes(energyClass)
+            )
+        }
 
         setFilteredWashingMachines(updatedMachines)
     }
@@ -63,7 +74,7 @@ const useFiltering = ({
 
     useEffect(() => {
         applyFiltersAndSort()
-    }, [searchTerm, sortOption, featureFilter])
+    }, [searchTerm, sortOption, featureFilter, energyClass])
 
     return {
         searchTerm,
@@ -72,6 +83,8 @@ const useFiltering = ({
         setSortOption,
         featureFilter,
         setFeatureFilter,
+        energyClass,
+        setEnergyClass,
     }
 }
 

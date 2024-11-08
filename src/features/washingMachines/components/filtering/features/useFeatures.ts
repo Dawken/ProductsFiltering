@@ -1,13 +1,12 @@
 import { ChangeEvent } from 'react'
-import { FeatureFilter } from '../../../../../types/filtering/featureType'
-import { Feature } from '../../../washingMachinesData'
 import { HookProps } from './features.types'
+import { FeatureEnum } from '../../../../../types/filtering/featureEnum'
 
 const useFeatures = ({ setFeatureFilter }: HookProps) => {
-    const isFeatureFilter = (value: string): value is FeatureFilter => {
+    const isFeatureFilter = (value: string): value is FeatureEnum => {
         return (
             value === 'wszystkie' ||
-            Object.values(Feature).some((feature) => feature === value)
+            Object.values(FeatureEnum).some((feature) => feature === value)
         )
     }
 

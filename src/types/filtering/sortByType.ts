@@ -1,1 +1,1 @@
-export type SortOption = 'wszystkie' | 'cena' | 'pojemność'
+export type SortOption = 'cena' | 'pojemność'

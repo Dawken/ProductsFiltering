@@ -1,4 +1,4 @@
-import { Feature } from '../../../../washingMachinesData'
+import { FeatureEnum } from '../../../../../../types/filtering/featureEnum'
 
 type Props = {
     model: string
@@ -6,7 +6,7 @@ type Props = {
     capacity: string
     color: string
     dimensions: string
-    features: Feature[]
+    features: FeatureEnum[]
 }
 
 export type { Props }

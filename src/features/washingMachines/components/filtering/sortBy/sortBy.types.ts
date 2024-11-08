@@ -5,7 +5,7 @@ type HookProps = {
 }
 
 type Props = HookProps & {
-    sortOption: SortOption
+    sortOption: SortOption | 'wszystkie'
 }
 
 export type { HookProps, Props }
