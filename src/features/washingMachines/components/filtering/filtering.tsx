@@ -1,17 +1,25 @@
 import React from 'react'
 import { Props } from './filtering.types'
 import useFiltering from './useFiltering'
+import SortBy from './sortBy/sortBy'
+import Features from './features/features'
 
 const Filtering = ({
     filteredWashingMachines,
     washingMachines,
     setFilteredWashingMachines,
 }: Props) => {
-    const { searchTerm, handleSearchChange, handleSortChange, sortOption } =
-        useFiltering({
-            washingMachines,
-            setFilteredWashingMachines,
-        })
+    const {
+        searchTerm,
+        handleSearchChange,
+        sortOption,
+        setSortOption,
+        featureFilter,
+        setFeatureFilter,
+    } = useFiltering({
+        washingMachines,
+        setFilteredWashingMachines,
+    })
 
     return (
         <div className='w-full p-6 flex flex-col items-center gap-2 text-sm'>
@@ -23,18 +31,15 @@ const Filtering = ({
                 onChange={handleSearchChange}
             />
             <div className='w-full flex flex-col items-start justify-start gap-2 px-5'>
-                <div className='w-full flex flex-col'>
-                    <span className='font-bold text-lg'> Sortuj Po:</span>
-
-                    <select
-                        className='border-white outline-none border h-9 px-2 w-full max-w-[249px] '
-                        onChange={handleSortChange}
-                        value={sortOption}
-                    >
-                        <option value='wszystkie'>Wszystkie</option>
-                        <option value='cena'>Cena</option>
-                        <option value='pojemność'>Pojemność</option>
-                    </select>
+                <div className='w-full flex'>
+                    <SortBy
+                        sortOption={sortOption}
+                        setSortOption={setSortOption}
+                    />
+                    <Features
+                        featureFilter={featureFilter}
+                        setFeatureFilter={setFeatureFilter}
+                    />
                 </div>
 
                 <div>Liczba wyników: {filteredWashingMachines.length}</div>
