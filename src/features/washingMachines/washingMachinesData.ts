@@ -20,7 +20,7 @@ export type WashingMachineType = {
     available: boolean
 }
 
-export const washingMachines = [
+export const washingMachinesData = [
     {
         model: 'WW90T754ABT',
         type: 'Pralka QuickDrive™',
