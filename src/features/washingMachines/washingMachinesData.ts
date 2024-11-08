@@ -91,7 +91,7 @@ export const washingMachinesData = [
     {
         model: 'WW11T754ABX',
         type: 'Pralka QuickDrive™',
-        capacity: '11 kg',
+        capacity: '10.5 kg',
         color: 'czarna',
         dimensions: '60 x 65 x 85 cm',
         features: [
@@ -109,7 +109,7 @@ export const washingMachinesData = [
     {
         model: 'WW70T554DTW',
         type: 'Pralka EcoBubble™',
-        capacity: '7 kg',
+        capacity: '8 kg',
         color: 'biała',
         dimensions: '50 x 55 x 85 cm',
         features: [
@@ -126,7 +126,7 @@ export const washingMachinesData = [
     {
         model: 'WW12T684DLX',
         type: 'Pralka EcoBubble™',
-        capacity: '12 kg',
+        capacity: '9 kg',
         color: 'srebrna',
         dimensions: '65 x 65 x 85 cm',
         features: [
@@ -161,7 +161,7 @@ export const washingMachinesData = [
     {
         model: 'WW85T654DLE',
         type: 'Pralka EcoBubble™',
-        capacity: '8.5 kg',
+        capacity: '8 kg',
         color: 'biała',
         dimensions: '55 x 60 x 85 cm',
         features: [
@@ -179,7 +179,7 @@ export const washingMachinesData = [
     {
         model: 'WW10T754DLE',
         type: 'Pralka QuickDrive™',
-        capacity: '10 kg',
+        capacity: '10.5 kg',
         color: 'biała',
         dimensions: '55 x 60 x 85 cm',
         features: [

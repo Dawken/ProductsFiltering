@@ -7,12 +7,12 @@ const Features = ({ featureFilter, setFeatureFilter }: Props) => {
     const { handleFeatureChange } = useFeatures({ setFeatureFilter })
 
     return (
-        <div className='w-full flex flex-col'>
+        <div className='sm:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'>Funkcje:</span>
             <select
                 onChange={handleFeatureChange}
                 value={featureFilter}
-                className='border-white outline-none border h-9 px-2 w-full max-w-[249px] '
+                className='border-white outline-none border h-9 px-2 w-full'
             >
                 <option value='wszystkie'>Wszystkie</option>
                 {Object.values(FeatureEnum).map((feature) => (

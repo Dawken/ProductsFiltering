@@ -7,12 +7,12 @@ const EnergyClass = ({ energyClass, setEnergyClass }: Props) => {
     const { handleEnergyClassChange } = useEnergyClass({ setEnergyClass })
 
     return (
-        <div className='w-full flex flex-col'>
+        <div className='sm:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'>Klasa energetyczna:</span>
             <select
                 onChange={handleEnergyClassChange}
                 value={energyClass}
-                className='border-white outline-none border h-9 px-2 w-full max-w-[249px] '
+                className='border-white outline-none border h-9 px-2 w-full'
             >
                 <option value='wszystkie'>Wszystkie</option>
                 {Object.values(EnergyClassEnum).map((energyClass) => (

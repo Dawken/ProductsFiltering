@@ -5,10 +5,10 @@ import { Props } from './sortBy.types'
 const SortBy = ({ sortOption, setSortOption }: Props) => {
     const { handleSortChange } = useSortBy({ setSortOption })
     return (
-        <div className='w-full flex flex-col'>
+        <div className='sm:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'> Sortuj Po:</span>
             <select
-                className='border-white outline-none border h-9 px-2 w-full max-w-[249px]'
+                className='border-white outline-none border h-9 px-2 w-full'
                 onChange={handleSortChange}
                 value={sortOption}
             >

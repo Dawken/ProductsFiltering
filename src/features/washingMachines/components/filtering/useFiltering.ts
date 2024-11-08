@@ -18,31 +18,20 @@ const useFiltering = ({
     const [energyClass, setEnergyClass] = useState<
         EnergyClassEnum | 'wszystkie'
     >('wszystkie')
+    const [capacity, setCapacity] = useState('wszystkie')
 
     const applyFiltersAndSort = () => {
         let updatedMachines = [...washingMachines]
 
         if (searchTerm) {
             updatedMachines = updatedMachines.filter((machine) => {
-                const {
-                    model,
-                    type,
-                    capacity,
-                    color,
-                    dimensions,
-                    features,
-                    price,
-                    monthlyInstallment,
-                    energyClass,
-                    availability,
-                    available,
-                } = machine
-                const machineString =
-                    `${model} ${type} ${capacity} ${color} ${dimensions} ${features.join(
-                        ' '
-                    )} ${price}  ${monthlyInstallment} ${energyClass} ${availability.join(
-                        ' '
-                    )} ${available ? 'dostępna' : 'niedostępna'}`.toLowerCase()
+                const machineString = Object.values(machine)
+                    .map((value) =>
+                        Array.isArray(value) ? value.join(' ') : String(value)
+                    )
+                    .join(' ')
+                    .toLowerCase()
+
                 return machineString.includes(searchTerm)
             })
         }
@@ -64,6 +53,11 @@ const useFiltering = ({
                 machine.energyClass.includes(energyClass)
             )
         }
+        if (capacity !== 'wszystkie') {
+            updatedMachines = updatedMachines.filter((machine) =>
+                machine.capacity.includes(capacity)
+            )
+        }
 
         setFilteredWashingMachines(updatedMachines)
     }
@@ -74,7 +68,7 @@ const useFiltering = ({
 
     useEffect(() => {
         applyFiltersAndSort()
-    }, [searchTerm, sortOption, featureFilter, energyClass])
+    }, [searchTerm, sortOption, featureFilter, energyClass, capacity])
 
     return {
         searchTerm,
@@ -85,6 +79,8 @@ const useFiltering = ({
         setFeatureFilter,
         energyClass,
         setEnergyClass,
+        capacity,
+        setCapacity,
     }
 }
 
