@@ -7,7 +7,7 @@ const Features = ({ featureFilter, setFeatureFilter }: Props) => {
     const { handleFeatureChange } = useFeatures({ setFeatureFilter })
 
     return (
-        <div className='sm:max-w-[249px] w-full flex flex-col'>
+        <div className='md:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'>Funkcje:</span>
             <select
                 onChange={handleFeatureChange}

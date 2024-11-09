@@ -5,7 +5,7 @@ import { Props } from './capacity.types'
 const Capacity = ({ capacity, setCapacity }: Props) => {
     const { handleSortChange } = useCapacity({ setCapacity })
     return (
-        <div className='sm:max-w-[249px] w-full flex flex-col'>
+        <div className='md:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'>Pojemność:</span>
             <select
                 className='border-white outline-none border h-9 px-2 w-full'

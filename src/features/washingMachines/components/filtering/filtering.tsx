@@ -37,7 +37,7 @@ const Filtering = ({
                 onChange={handleSearchChange}
             />
             <div className='w-full flex flex-col items-start justify-start gap-2 px-10'>
-                <div className='w-full flex flex-wrap justify-between gap-5'>
+                <div className='w-full flex flex-wrap justify-evenly gap-5'>
                     <SortBy
                         sortOption={sortOption}
                         setSortOption={setSortOption}

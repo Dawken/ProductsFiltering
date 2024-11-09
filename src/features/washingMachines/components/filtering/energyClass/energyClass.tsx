@@ -7,7 +7,7 @@ const EnergyClass = ({ energyClass, setEnergyClass }: Props) => {
     const { handleEnergyClassChange } = useEnergyClass({ setEnergyClass })
 
     return (
-        <div className='sm:max-w-[249px] w-full flex flex-col'>
+        <div className='md:max-w-[249px] w-full flex flex-col'>
             <span className='font-bold text-lg'>Klasa energetyczna:</span>
             <select
                 onChange={handleEnergyClassChange}
